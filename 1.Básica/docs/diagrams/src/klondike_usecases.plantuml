@@ -1,19 +1,19 @@
-@startuml mastermind_usecases
+@startuml klondike_usecases
 left to right direction
 actor Player
 usecase Start
 Player --> Start
 usecase Board as "Show board"
-usecase Propose as "Propose combination"
-Player --> Propose
+usecase Move as "Move combination"
+Player --> Move
 usecase Resume
 Player --> Resume
 Start .down.> Board: include
-Propose .down.> Board: include
+Move .down.> Board: include
 @enduml
 
-@startuml mastermind_states
-state INITIAL
+@startuml klondike_states
+state INITIAL as "INITIALXXXXXXXXXXX"
 state IN_GAME
 state OUT_GAME
 state EXIT
@@ -22,7 +22,7 @@ state if_resumed <<choice>>
 
 [*] --> INITIAL
 INITIAL --> IN_GAME: Start
-IN_GAME --> if_finished: Propose combination
+IN_GAME --> if_finished: Move combination
 if_finished --> IN_GAME
 if_finished --> OUT_GAME: [finished]
 OUT_GAME --> if_resumed: Resume
@@ -31,7 +31,7 @@ if_resumed --> EXIT
 EXIT --> [*]
 @enduml
 
-@startuml propose_combination_usecase
+@startuml Move_usecase
 state IN_GAME
 state requested as " "
 state allowed as " "
@@ -46,15 +46,15 @@ state is_finished <<choice>>
 state is_winner <<choice>>
 
 [*] --> IN_GAME
-IN_GAME --> requested: Player requests propose a combination
-requested --> allowed: System requests a proposed combination
-allowed --> is_correct: Player introduces a proposed combination
+IN_GAME --> requested: Player requests Move a combination
+requested --> allowed: System requests a Moved combination
+allowed --> is_correct: Player introduces a Moved combination
 is_correct --> ShowBoard
-is_correct --> error: [incorrect proposed combination]
+is_correct --> error: [incorrect Moved combination]
 note on link 
-  proposedCombination.colors.length != 4
-  proposedCombination.colors at least one repeated
-  proposedCombination.colors at least one != Color.values
+  MovedCombination.colors.length != 4
+  MovedCombination.colors at least one repeated
+  MovedCombination.colors at least one != Color.values
 end note
 error --> last: System shows error
 ShowBoard --> is_finished
@@ -73,7 +73,7 @@ end note
 is_finished --> last
 winner --> finished: System shows winner message
 looser --> finished: System shows loser message
-last --> [*]: System allows to propose a combination
+last --> [*]: System allows to Move a combination
 finished --> [*]: System allows to resume a new game
 @enduml
 
@@ -102,7 +102,7 @@ state ShowBoard as "Show board"
 [*] --> INITIAL
 INITIAL --> start: Player requests to start a new game
 start --> ShowBoard: System shows title message
-ShowBoard --> IN_GAME: System allows Propose combination
+ShowBoard --> IN_GAME: System allows Move combination
 IN_GAME --> [*]
 @enduml
 
@@ -111,5 +111,5 @@ state attempts_shown as " "
 state combinations_shown as " "
 [*] --> attempts_shown: System shows attempts
 attempts_shown --> combinations_shown: System shows secret combination as "****"
-combinations_shown --> [*]: System shows proposed combinations with results
+combinations_shown --> [*]: System shows Moved combinations with results
 @enduml

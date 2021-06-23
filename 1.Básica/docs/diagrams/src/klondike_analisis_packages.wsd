@@ -1,4 +1,4 @@
-@startuml mastermind_analisis_packages
+@startuml klondike_analisis_packages
 package views
 package controllers
 package models
@@ -10,7 +10,7 @@ controllers ..> types
 models ..> types
 @enduml
 
-@startuml mastermind_analisis_controllers
+@startuml klondike_analisis_controllers
 package controllers {
     abstract class Controller
     class StartController {
@@ -58,7 +58,7 @@ ShowBoardController .down.> Color
 StartController .down.> Color
 @enduml
 
-@startuml mastermind_analisis_views
+@startuml klondike_analisis_views
 package views {
     class PlayerView
     class StartView {
@@ -142,7 +142,7 @@ ProposedCombinationView .down.> Error
 ErrorView .down.> Error
 @enduml
 
-@startuml mastermind_analisis_models
+@startuml klondike_analisis_models
 package models {
     class Board {
         + reset()
@@ -193,7 +193,7 @@ SecretCombination .down.> Result
 SecretCombination .down.> ProposedCombination
 @enduml
 
-@startuml mastermind_analisis_types
+@startuml klondike_analisis_types
 package types {
     enum Color {
         + RED

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="186px" preserveAspectRatio="none" style="width:512px;height:186px;background:#FFFFFF;" version="1.1" viewBox="0 0 512 186" width="512px" zoomAndPan="magnify"><defs><filter height="300%" id="fyobrqi42hoz7" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[de2effd8dc5bf946a609466312d0f75f]
+entity Player--><ellipse cx="26" cy="58.5" fill="#FEFECE" filter="url(#fyobrqi42hoz7)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M26,66.5 L26,93.5 M13,74.5 L39,74.5 M26,93.5 L13,108.5 M26,93.5 L39,108.5 " fill="none" filter="url(#fyobrqi42hoz7)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="6" y="128.5332">Player</text><ellipse cx="187.1985" cy="21.4517" fill="#FEFECE" filter="url(#fyobrqi42hoz7)" rx="32.6985" ry="15.4517" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="172.1985" y="25.1802">Start</text><ellipse cx="435.341" cy="56.6182" fill="#FEFECE" filter="url(#fyobrqi42hoz7)" rx="65.341" ry="15.6182" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="394.841" y="61.1348">Show board</text><ellipse cx="186.8789" cy="90.3758" fill="#FEFECE" filter="url(#fyobrqi42hoz7)" rx="79.8789" ry="18.3758" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="128.8373" y="94.4024">Move combination</text><ellipse cx="186.861" cy="159.4809" fill="#FEFECE" filter="url(#fyobrqi42hoz7)" rx="48.361" ry="15.4809" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="158.6681" y="163.8128">Resume</text><!--MD5=[39353cd92ba960c69c4d2a9385fee2c7]
+link Player to Start--><path d="M46.29,79.6 C55.21,74.74 66.02,69.08 76,64.5 C102.33,52.41 133.11,40.57 155.41,32.38 " fill="none" id="Player-to-Start" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="160.31,30.59,150.4842,29.9161,155.6127,32.3033,153.2255,37.4318,160.31,30.59" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7e30d075c7e28ae86a5e6e748d3cd0b6]
+link Player to Move--><path d="M46.18,90.5 C60.4,90.5 80.87,90.5 101.78,90.5 " fill="none" id="Player-to-Move" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="106.81,90.5,97.81,86.5,101.81,90.5,97.81,94.5,106.81,90.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5fec2ab2a197ce562aec9d83f689b0ce]
+link Player to Resume--><path d="M46.01,99.23 C62.18,106.61 86.04,117.41 107,126.5 C121.58,132.82 137.76,139.62 151.66,145.39 " fill="none" id="Player-to-Resume" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="156.28,147.31,149.4998,140.1666,151.6617,145.394,146.4342,147.5559,156.28,147.31" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8c43b8889fbbf04d7fcb9e85038f3a81]
+link Start to Board--><path d="M218.72,25.86 C257.4,31.35 324.73,40.91 373.92,47.9 " fill="none" id="Start-to-Board" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="378.92,48.61,370.5677,43.3909,373.9691,47.9109,369.4491,51.3123,378.92,48.61" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="298" y="34.9951">include</text><!--MD5=[9d76e9e918416d7b1b239c8314f55c7c]
+link Move to Board--><path d="M266.89,91.86 C290.53,91.21 316.43,89.43 340,85.5 C358.26,82.45 377.9,76.83 394.52,71.34 " fill="none" id="Move-to-Board" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="399.58,69.64,389.7736,68.7267,394.8423,71.2383,392.3308,76.307,399.58,69.64" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="298" y="81.9951">include</text><!--MD5=[2bd98d6a3ea7be13cfab8def1457dc18]
+@startuml klondike_usecases
+left to right direction
+actor Player
+usecase Start
+Player - -> Start
+usecase Board as "Show board"
+usecase Move as "Move combination"
+Player - -> Move
+usecase Resume
+Player - -> Resume
+Start .down.> Board: include
+Move .down.> Board: include
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 14:40:07 CEST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: Cp1252
+Language: es
+Country: ES
+--></g></svg>
