@@ -1,0 +1,133 @@
+@startuml mastermind_diseño_participantes
+package front <<angular:11>>{
+    boundary XTemplate <<HTML>>
+    boundary XComponent <<TypeScript>>
+    boundary XStyle <<CSS>>
+    control XService <<TypeScript>>
+    boundary XValidator <<TypeScript>>
+    entity HTTPService
+    entity XDto <<java>>
+}
+XComponent --left-> XTemplate
+XTemplate --down-> XStyle
+XComponent --down-> XService
+XComponent --down-> XValidator
+XComponent --down-> XDto
+XService o--down- HTTPService
+XService --down-> XDto
+
+package analysis{
+    boundary XView
+    control XController
+    entity XEntity
+    entity XDao
+}
+
+XView --down-> XController
+XView --down-> XEntity
+XController --down-> XDao
+XController ..down.> XEntity
+
+package backend <<spring:5.3.5>>{
+control "XController - java" as XControllerJava
+control "XResource - java" as XResourceJava
+entity "XRepository - java" as XRepositoryJava
+entity "XEntity - java" as XEntityJava
+entity "XDto - java" as XDtoJava
+}
+
+XControllerJava --down-> XRepositoryJava
+XControllerJava --down-> XEntityJava
+XControllerJava --down-> XDtoJava
+XRepositoryJava --down-> XEntityJava
+XResourceJava --down-> XDtoJava
+XResourceJava --right-> XControllerJava
+XDtoJava --left-> XEntityJava
+
+XComponent ...up.> XView : <<trace>>
+XTemplate ...up.> XView : <<trace>>
+XStyle ...up.> XView : <<trace>>
+XService ...up.> XController : <<trace>>
+XDto ...up.> XEntity : <<trace>>
+XDto ...down.> XDtoJava : <<trace>>
+XRepositoryJava ...up.> XDao : <<trace>>
+XResourceJava ...up.>  XDao : <<trace>>
+XControllerJava ...up.>  XDao : <<trace>>
+XDtoJava ...up.>  XEntity : <<trace>>
+XEntityJava ...up.>  XEntity : <<trace>>
+XService ...down.>  XResourceJava : <<trace>>
+@enduml
+
+@startuml mastermind_diseño_participantes_interacciones
+actor Actor
+boundary XTemplate
+boundary XComponent
+control XValidator
+control XService
+control XResource
+control XController
+entity XRepository
+entity XEntity
+boundary XDto
+
+activate Actor
+Actor -> XTemplate: set
+deactivate Actor
+activate XTemplate
+
+XTemplate -> XComponent: set
+deactivate XTemplate
+activate XComponent
+
+XComponent -> XValidator: check
+XComponent -> XService: set
+deactivate XComponent
+activate XService
+
+XService -> XResource: http request
+deactivate XService
+activate XResource
+
+XResource -> XController: set
+deactivate XResource
+activate XController
+
+XController -> XRepository: set
+deactivate XController
+activate XRepository
+
+XRepository -> XEntity: new
+
+XRepository -> XController: return entity
+deactivate XRepository
+activate XController
+
+XController -> XEntity: set
+
+XController -> XDto: new (entity)
+deactivate XController
+activate XDto
+
+XDto -> XEntity: getX()
+deactivate XDto
+activate XEntity
+
+XEntity -> XDto: return value
+deactivate XEntity
+activate XController
+
+XController -> XResource: return xDto
+deactivate XController
+activate XResource
+
+XResource -> XService: http response
+deactivate XResource
+activate XService
+
+XService -> XComponent: return xDto
+deactivate XService
+activate XComponent
+
+XComponent -> XTemplate: set
+deactivate XComponent
+@enduml

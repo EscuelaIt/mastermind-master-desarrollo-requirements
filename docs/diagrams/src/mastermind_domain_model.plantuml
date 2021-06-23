@@ -1,0 +1,140 @@
+@startuml mastermind_domain_model
+class Mastermind
+class Turn
+class Board
+class Player
+class MakerPlayer
+class BreakerPlayer
+class Combination
+class ProposedCombination
+class SecretCombination
+class Result
+class WinnerResult
+class Success
+class White
+class Black
+enum Color {
+	- RED
+	- GREEN
+	- BLUE
+	- YELLOW
+	- CYAN
+	- MAGENTA
+}
+
+Mastermind *--> "2"Player
+Mastermind *--> Board
+Mastermind *--> Turn
+Turn -down-> "2"Player
+Board *--> SecretCombination
+Board o--> "0..10"ProposedCombination
+Board o--> "0..10"Result
+Success <|-- Black
+Success <|-- White
+Result *--> "2..4"Success
+Result <|-- WinnerResult
+WinnerResult *--> "4"Black
+Combination <|-- ProposedCombination
+Combination <|-- SecretCombination
+Combination *--> "4"Color
+Player <|-- MakerPlayer
+Player <|-- BreakerPlayer
+MakerPlayer -down-> SecretCombination
+MakerPlayer .down.> Result
+BreakerPlayer -down-> "0..10"ProposedCombination
+@enduml
+
+@startuml mastermind_final_state_winner
+object ":Mastermind" as Mastermind
+object ":Board" as Board {
+	attempts = 5
+}
+object ":SecretCombination" as SecretCombination
+object ":ProposedCombination" as ProposedCombination1
+object ":ProposedCombination" as ProposedCombination2
+object ":Color" as Color1
+object ":Color" as Color2
+object ":Color" as Color3
+object ":Color" as Color4
+object ":Color" as Color5
+object ":Color" as Color6
+object ":Result" as Result1
+object ":Result" as Result2
+object ":White" as White1
+object ":Black" as Black1
+object ":Black" as Black2
+object ":White" as White3
+object ":Black" as Black3
+object ":Black" as Black4
+
+Mastermind *--> Board
+note "attempts - 1" as proposedCombinations
+Board *--> ProposedCombination1
+Board *--> ProposedCombination2
+Board *--> SecretCombination
+Board *--> Result1
+Board *--> Result2
+proposedCombinations .. ProposedCombination1
+ProposedCombination1 *--> Color1
+ProposedCombination1 *--> Color2
+ProposedCombination1 --> Result1
+ProposedCombination2 *--> Color3
+ProposedCombination2 *--> Color4
+ProposedCombination2 --> Result2
+SecretCombination *--> Color5
+SecretCombination *--> Color6
+proposedCombinations .. Result1
+Result1 *--> White1
+Result1 *--> Black1
+Result2 *--> Black2
+Result1 *--> White3
+Result1 *--> Black3
+Result2 *--> Black4
+note "4" as winnerBlacks
+winnerBlacks .. Black4
+winnerBlacks .. Black2
+note "0..3" as loserBlacks
+loserBlacks .. Black1
+loserBlacks .. Black3
+note "0..4" as loserWhites
+loserWhites .. White1
+loserWhites .. White3
+note "4" as colors1
+colors1 .. Color1
+colors1 .. Color2
+note "4" as colors2
+colors2 .. Color3
+colors2 .. Color4
+note "4" as colors3
+colors3 .. Color5
+colors3 .. Color6
+@enduml
+
+@startuml mastermind_propose_secuence
+participant BreakerPlayer as ":BreakerPlayer" order 10
+participant MakerPlayer as ":MakerPlayer" order 20
+participant ProposedCombination as ":ProposedCombination" order 30
+participant SecretCombination as ":SecretCombination" order 40
+participant result as "result:Result" order 50
+
+loop result.blacks < 4 && attempts < 10
+    BreakerPlayer -> BreakerPlayer: propose a combination
+    BreakerPlayer -> MakerPlayer: set result
+    loop 4
+        MakerPlayer -> ProposedCombination: get color
+        ProposedCombination --> MakerPlayer: proposed color
+        loop 4
+            MakerPlayer -> SecretCombination: get color
+            SecretCombination --> MakerPlayer: secret color
+            alt proposed color = secret color
+                alt colors in same position
+                    MakerPlayer -> result: put black
+                else
+                    MakerPlayer -> result: put white
+                end
+            end
+        end
+    end
+    MakerPlayer --> BreakerPlayer: result
+end
+@enduml

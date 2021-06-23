@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="486px" preserveAspectRatio="none" style="width:195px;height:486px;" version="1.1" viewBox="0 0 195 486" width="195px" zoomAndPan="magnify"><defs><filter height="300%" id="f13h539gysog0o" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g id="IN_GAME"><rect fill="#FEFECE" filter="url(#f13h539gysog0o)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="80" x="15.5" y="87"/><line style="stroke:#A80036;stroke-width:1.5;" x1="15.5" x2="95.5" y1="114.6094" y2="114.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="25.5" y="106.5332">IN_GAME</text></g><g id="requested"><rect fill="#FEFECE" filter="url(#f13h539gysog0o)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="30.5" y="215"/><line style="stroke:#A80036;stroke-width:1.5;" x1="30.5" x2="80.5" y1="242.6094" y2="242.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="57.5" y="234.5332"/></g><g id="OUT_GAME"><rect fill="#FEFECE" filter="url(#f13h539gysog0o)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="97" x="7" y="343"/><line style="stroke:#A80036;stroke-width:1.5;" x1="7" x2="104" y1="370.6094" y2="370.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="17" y="362.5332">OUT_GAME</text></g><ellipse cx="55.5" cy="16" fill="#000000" filter="url(#f13h539gysog0o)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><ellipse cx="55.5" cy="464" fill="none" filter="url(#f13h539gysog0o)" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="56" cy="464.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[bc741243a5bb3318d84c2be45b028a19]
+link *start to IN_GAME--><path d="M55.5,26.01 C55.5,38.7 55.5,62.41 55.5,81.57 " fill="none" id="*start-to-IN_GAME" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="55.5,86.84,59.5,77.84,55.5,81.84,51.5,77.84,55.5,86.84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cb6173ff77cdc04f8d8e07efcd41f8ff]
+link IN_GAME to requested--><path d="M55.5,137.29 C55.5,157.95 55.5,187.67 55.5,209.65 " fill="none" id="IN_GAME-to-requested" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="55.5,214.78,59.5,205.78,55.5,209.78,51.5,205.78,55.5,214.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="56.5" y="181.4951">Player requests to exit</text><!--MD5=[8c8d84f4429c7d28f320f40532aa5be3]
+link requested to OUT_GAME--><path d="M55.5,265.29 C55.5,285.95 55.5,315.67 55.5,337.65 " fill="none" id="requested-to-OUT_GAME" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="55.5,342.78,59.5,333.78,55.5,337.78,51.5,333.78,55.5,342.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="56.5" y="309.4951">System allows Save</text><!--MD5=[806d3f1ecaa019b7bb4d7c88d29dbbfe]
+link OUT_GAME to *end--><path d="M55.5,393.21 C55.5,410.84 55.5,434.13 55.5,448.84 " fill="none" id="OUT_GAME-to-*end" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="55.5,453.84,59.5,444.84,55.5,448.84,51.5,444.84,55.5,453.84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[258c0b1c7a0e3d615ef85abffb2d7dfc]
+@startuml exit_usecase
+state IN_GAME
+state requested as " "
+state OUT_GAME
+
+[*] - -> IN_GAME
+IN_GAME - -> requested: Player requests to exit
+requested - -> OUT_GAME: System allows Save
+OUT_GAME - -> [*]
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: es
+Country: ES
+--></g></svg>

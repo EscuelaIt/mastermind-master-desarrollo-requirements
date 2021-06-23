@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="349px" preserveAspectRatio="none" style="width:240px;height:349px;" version="1.1" viewBox="0 0 240 349" width="240px" zoomAndPan="magnify"><defs><filter height="300%" id="f1mum9p9i379tv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[1affcf8a646183f59d752b76f98e02e7]
+entity views--><polygon fill="#FEFECE" filter="url(#f1mum9p9i379tv)" points="136.5,6,199.5,6,206.5,28.2969,223.5,28.2969,223.5,45.2969,136.5,45.2969,136.5,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="136.5" x2="206.5" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="45" x="146.5" y="21.9951">views</text><!--MD5=[a7825cdfc9773e2ccb28c0d25db19e9e]
+entity controllers--><polygon fill="#FEFECE" filter="url(#f1mum9p9i379tv)" points="55.5,105,162.5,105,169.5,127.2969,186.5,127.2969,186.5,144.2969,55.5,144.2969,55.5,105" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="55.5" x2="169.5" y1="127.2969" y2="127.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="89" x="65.5" y="120.9951">controllers</text><!--MD5=[aa3b458352135463a5a0f2d2a48ef4d9]
+entity models--><polygon fill="#FEFECE" filter="url(#f1mum9p9i379tv)" points="16,204,92,204,99,226.2969,116,226.2969,116,243.2969,16,243.2969,16,204" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="99" y1="226.2969" y2="226.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="26" y="219.9951">models</text><!--MD5=[4774a4ee563c42801436b712436441d4]
+entity types--><polygon fill="#FEFECE" filter="url(#f1mum9p9i379tv)" points="125.5,303,188.5,303,195.5,325.2969,212.5,325.2969,212.5,342.2969,125.5,342.2969,125.5,303" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="125.5" x2="195.5" y1="325.2969" y2="325.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="45" x="135.5" y="318.9951">types</text><!--MD5=[fd4dadafb7dfafd89665a9151015bafc]
+link views to controllers--><path d="M168.624,45.203 C159.074,60.903 145.388,83.405 135.135,100.261 " fill="none" id="views-to-controllers" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="132.341,104.855,140.4346,99.243,134.9386,100.5827,133.599,95.0868,132.341,104.855" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a47103ae2ffafd08434d69e1e4d1349a]
+link views to types--><path d="M187.428,45.171 C193.246,60.852 200.861,83.999 204,105 C214.503,175.275 191.093,258.1441 177.633,297.8995 " fill="none" id="views-to-types" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="175.884,302.9885,182.5919,295.7771,177.509,298.2599,175.0261,293.1771,175.884,302.9885" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6bfde5656e7ece32836aeea1e9e8a819]
+link controllers to models--><path d="M110.3954,144.203 C101.4932,159.903 88.7342,182.405 79.1769,199.261 " fill="none" id="controllers-to-models" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="76.572,203.855,84.4916,198.0001,79.0389,199.5059,77.5331,194.0531,76.572,203.855" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c460ee89b467576f4399504260eade9f]
+link controllers to types--><path d="M125.602,144.293 C134.383,180.147 153.51,258.2484 163.169,297.6919 " fill="none" id="controllers-to-types" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="164.411,302.7636,166.1555,293.0705,163.2217,297.9071,158.3851,294.9733,164.411,302.7636" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9da2d375dc0417b2d3724b966d4c0d45]
+link models to types--><path d="M85.8594,243.2026 C102.816,259.1714 127.244,282.1765 145.236,299.1202 " fill="none" id="models-to-types" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="149.202,302.8548,145.3913,293.773,145.5616,299.4273,139.9073,299.5976,149.202,302.8548" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e329c2bc87d1df7a47e7746686ba884d]
+@startuml
+package views
+package controllers
+package models
+package types
+views .down.> controllers
+views .down.> types
+controllers .down.> models
+controllers .down.> types
+models .down.> types
+@enduml
+
+PlantUML version 1.2021.4beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

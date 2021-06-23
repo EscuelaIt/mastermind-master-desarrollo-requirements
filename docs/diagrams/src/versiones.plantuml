@@ -1,0 +1,49 @@
+@startuml versiones
+
+state Básica
+state Gráficos
+state UndoRedo
+state ClienteServidor
+State Ficheros
+State BasesDatos
+
+[*] --> Básica
+Básica --> Gráficos:Mantenimiento adaptativo
+Gráficos --> UndoRedo:Mantenimiento perfectivo
+UndoRedo --> ClienteServidor:Mantenimiento adaptativo
+ClienteServidor --> Ficheros:Mantenimiento perfectivo
+Ficheros --> BasesDatos:Mantenimiento adaptativo
+BasesDatos --> [*]
+
+
+
+note right of Básica #15D2F3
+  Juego de Mastermind con interfaz
+  de consola y con casos de uso:
+  Start, Propose y Resume.
+end note
+
+note right of Gráficos #15D2F3
+  Añadiendo interfaz gráfica.
+end note
+
+note right of UndoRedo #15D2F3
+  Añadiendo funcionalidad con deshacer
+  y rehacer jugadas.
+end note
+
+note right of ClienteServidor #15D2F3
+  Añadiendo distribución cliente/servidor.
+end note
+
+note right of Ficheros #15D2F3
+  Añadiendo funcionalidad con persistencia
+  de ficheros.
+end note
+
+note right of BasesDatos #15D2F3
+  Adaptando persistencia con bases de datos.
+end note
+
+
+@enduml

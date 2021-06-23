@@ -1,0 +1,874 @@
+@startuml mastermind_analisis
+package views {
+    class PlayerView
+    class StartView
+    class ProposeView
+    class ResumeView
+    class BoardView
+    class ProposedCombinationView
+    class SecretCombinationView
+    class ResultView
+    class ColorView
+    enum Message
+    class ErrorView
+    class MenuView
+    class SaveView
+    class OpenView
+}
+
+PlayerView *-down-> StartView
+PlayerView *-down-> ProposeView
+PlayerView *-down-> ResumeView
+PlayerView *-down-> SaveView
+StartView .down.> BoardView
+StartView .down.> OpenView
+ProposeView .down.> BoardView
+BoardView .down.> ProposedCombinationView
+BoardView .down.> ResultView
+BoardView .down.> Message
+BoardView .down.> SecretCombinationView
+ProposedCombinationView .down.> ColorView
+ProposedCombinationView .down.> ErrorView
+ProposedCombinationView .down.> Message
+ResultView .down.> Message
+StartView .down.> Message
+ResumeView .down.> Message
+ProposeView .down.> Message
+ProposeView .down.> MenuView
+MenuView .down.> ProposedCombinationView
+MenuView .down.> Message
+SaveView .down.> Message
+OpenView .down.> Message
+
+package controllers {
+    abstract class Controller
+    class StartController
+    class ProposeController
+    class ResumeController
+    class ShowBoardController
+    class UndoController
+    class RedoController
+    class ExitController
+    class SaveController
+    class OpenController
+}
+
+Controller <|-- StartController
+Controller <|-- ProposeController
+Controller <|-- ResumeController
+Controller <|-- ShowBoardController
+Controller <|-- RedoController
+Controller <|-- UndoController
+Controller <|-- ExitController
+Controller <|-- SaveController
+Controller <|-- OpenController
+StartController *-down-> ShowBoardController
+ProposeController *-down-> ShowBoardController
+UndoController *-down-> ShowBoardController
+RedoController *-down-> ShowBoardController
+OpenController *-down-> ShowBoardController
+
+package models {
+    class Board
+    class Combination
+    class ProposedCombination
+    class SecretCombination
+    Combination <|-- ProposedCombination
+    Combination <|-- SecretCombination
+    class Result
+}
+
+package types {
+    enum Color
+    enum Error
+}
+
+Board *-down-> ProposedCombination
+Board *-down-> SecretCombination
+Board *-down-> Result
+SecretCombination .down.> Result
+SecretCombination .down.> ProposedCombination
+
+views .down.> controllers
+controllers .down.> models
+views .down.> types
+models .down.> types
+@enduml
+
+@startuml mastermind_analisis_usecase_start
+allow_mixing
+
+actor Player
+
+package views {
+    object StartView
+    object Message
+    object BoardView
+    object SecretCombinationView
+    object ProposedCombinationView
+    object ResultView
+    object ColorView
+}
+
+package controllers {
+    object "startController\n:StartController" as StartController
+}
+
+package models {
+    object Board
+    object Result
+    object ProposedCombination
+}
+
+package types {
+    object "color\n:Color" as Color
+}
+
+Player -down-> StartView
+note on link
+    start()
+end note
+StartView .down.> Message
+note on link
+    write()
+end note
+StartView .down.> BoardView
+note on link
+    write(startController)
+end note
+BoardView .down.> StartController
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+BoardView .down.> Message
+note on link
+    write(attempts)
+end note
+BoardView .down.> SecretCombinationView
+note on link
+    write()
+end note
+SecretCombinationView .down.> Message
+note on link
+    write()
+end note
+BoardView .down.> ProposedCombinationView
+note on link
+    write(colors)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    write(color)
+end note
+ColorView .down.> Color
+BoardView .down.> ResultView
+note on link
+    write(blacks, whites)
+end note
+ResultView .down.> Message
+note on link
+    write(blacks, whites)
+end note
+StartController -down-> Board
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+Board *-down-> Result
+note on link
+    getBlacks()
+    getWhites()
+end note
+Board *-down-> ProposedCombination
+note on link
+    getColors()
+end note
+ProposedCombination *-down-> Color
+Board .down.> Color
+StartController .down.> Color
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+@enduml
+
+@startuml mastermind_analisis_usecase_propose
+allow_mixing
+
+actor Player
+
+package views {
+    object ProposeView
+    object Message
+    object BoardView
+    object SecretCombinationView
+    object ProposedCombinationView
+    object ResultView
+    object ColorView
+    object ErrorView
+    object MenuView
+}
+
+package controllers {
+    object "proposeController\n:ProposeController" as ProposeController
+}
+
+package models {
+    object Board
+    object Result
+    object "proposedCombination\n:ProposedCombination" as ProposedCombination
+    object SecretCombination
+}
+
+package types {
+    object "color\n:Color" as Color
+    object "error\n:Error" as Error
+}
+
+Player -down-> ProposeView
+note on link
+    propose()
+end note
+ProposeView .down.> BoardView
+note on link
+    write(proposeController)
+end note
+BoardView .down.> ProposeController
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+BoardView .down.> Message
+note on link
+    write(attempts)
+end note
+BoardView .down.> SecretCombinationView
+note on link
+    write()
+end note
+SecretCombinationView .down.> Message
+note on link
+    write()
+end note
+BoardView .down.> ProposedCombinationView
+note on link
+    write(colors)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    write(color)
+end note
+ColorView .down.> Color
+BoardView .down.> ResultView
+note on link
+    write(blacks, whites)
+end note
+ResultView .down.> Message
+note on link
+    write(blacks, whites)
+end note
+ProposeController -down-> Board
+note on link
+    getError(colors)
+    add(colors)
+    isFinished()
+    isWinner()
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+Board *-down-> Result
+note on link
+    isWinner()
+    getBlacks()
+    getWhites()
+end note
+Board *-down-> ProposedCombination
+note on link
+    new(colors)
+    getError()
+    getColors()
+end note
+ProposedCombination *-down-> Color
+Board .down.> Color
+ProposeController .down.> Color
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+MenuView .down.> ProposedCombinationView
+note on link
+    read(proposeController)
+end note
+MenuView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> ErrorView
+note on link
+    write(error)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    read()
+end note
+ProposedCombinationView .down.> ProposeController
+note on link
+    getError(colors)
+    add(colors)
+end note
+ProposedCombination .down.> Error
+ErrorView .down.> Error
+ProposeView -down-> ProposeController
+note on link
+    isFinished()
+    isWinner()
+end note
+ProposeView .down.> Message
+note on link
+    write()
+end note
+Board .down.> Board
+note on link
+    isLoser()
+end note
+Board *-down-> SecretCombination
+note on link
+    getResult(proposedCombination)
+end note
+SecretCombination *-down-> ProposedCombination
+note on link
+    contains(color)
+    contains(color, position)
+end note
+SecretCombination *-down-> Color
+SecretCombination .down.> Result
+note on link
+    new(blacks, whites)
+end note
+Board .down.> Error
+ProposeView .down.> MenuView
+note on link
+    write(proposeController)
+end note
+@enduml
+
+@startuml mastermind_analisis_usecase_undo
+allow_mixing
+
+actor Player
+
+package views {
+    object ProposeView
+    object Message
+    object BoardView
+    object SecretCombinationView
+    object ProposedCombinationView
+    object ResultView
+    object ColorView
+    object MenuView
+}
+
+package controllers {
+    object "undoController\n:UndoController" as UndoController
+}
+
+package models {
+    object Board
+    object Result
+    object "proposedCombination\n:ProposedCombination" as ProposedCombination
+}
+
+package types {
+    object "color\n:Color" as Color
+}
+
+Player -down-> ProposeView
+note on link
+    undo()
+end note
+ProposeView .down.> BoardView
+note on link
+    write(UndoController)
+end note
+BoardView .down.> UndoController
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+BoardView .down.> Message
+note on link
+    write(attempts)
+end note
+BoardView .down.> SecretCombinationView
+note on link
+    write()
+end note
+SecretCombinationView .down.> Message
+note on link
+    write()
+end note
+BoardView .down.> ProposedCombinationView
+note on link
+    write(colors)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    write(color)
+end note
+ColorView .down.> Color
+BoardView .down.> ResultView
+note on link
+    write(blacks, whites)
+end note
+ResultView .down.> Message
+note on link
+    write(blacks, whites)
+end note
+UndoController -down-> Board
+note on link
+    undoable()
+    redoable()
+    undo()
+    isFinished()
+    isWinner()
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+Board *-down-> Result
+note on link
+    isWinner()
+    getBlacks()
+    getWhites()
+end note
+Board *-down-> ProposedCombination
+note on link
+    getError()
+    getColors()
+end note
+ProposedCombination *-down-> Color
+Board .down.> Color
+UndoController .down.> Color
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+MenuView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    read()
+end note
+ProposedCombinationView .down.> UndoController
+note on link
+    getError(colors)
+    add(colors)
+end note
+ProposeView -down-> UndoController
+note on link
+    isFinished()
+    isWinner()
+end note
+ProposeView .down.> Message
+note on link
+    write()
+end note
+Board .down.> Board
+note on link
+    isLoser()
+end note
+ProposeView .down.> MenuView
+note on link
+    write(UndoController)
+end note
+MenuView .down.> UndoController
+note on link
+    undoable()
+    redoable()
+    undo()
+end note
+@enduml
+
+@startuml mastermind_analisis_usecase_redo
+allow_mixing
+
+actor Player
+
+package views {
+    object ProposeView
+    object Message
+    object BoardView
+    object SecretCombinationView
+    object ProposedCombinationView
+    object ResultView
+    object ColorView
+    object MenuView
+}
+
+package controllers {
+    object "redoController\n:RedoController" as RedoController
+}
+
+package models {
+    object Board
+    object Result
+    object "proposedCombination\n:ProposedCombination" as ProposedCombination
+}
+
+package types {
+    object "color\n:Color" as Color
+}
+
+Player -down-> ProposeView
+note on link
+    redo()
+end note
+ProposeView .down.> BoardView
+note on link
+    write(RedoController)
+end note
+BoardView .down.> RedoController
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+BoardView .down.> Message
+note on link
+    write(attempts)
+end note
+BoardView .down.> SecretCombinationView
+note on link
+    write()
+end note
+SecretCombinationView .down.> Message
+note on link
+    write()
+end note
+BoardView .down.> ProposedCombinationView
+note on link
+    write(colors)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    write(color)
+end note
+ColorView .down.> Color
+BoardView .down.> ResultView
+note on link
+    write(blacks, whites)
+end note
+ResultView .down.> Message
+note on link
+    write(blacks, whites)
+end note
+RedoController -down-> Board
+note on link
+    undoable()
+    redoable()
+    redo()
+    isFinished()
+    isWinner()
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+Board *-down-> Result
+note on link
+    isWinner()
+    getBlacks()
+    getWhites()
+end note
+Board *-down-> ProposedCombination
+note on link
+    getError()
+    getColors()
+end note
+ProposedCombination *-down-> Color
+Board .down.> Color
+RedoController .down.> Color
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+MenuView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> Message
+note on link
+    write()
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    read()
+end note
+ProposedCombinationView .down.> RedoController
+note on link
+    getError(colors)
+    add(colors)
+end note
+ProposeView -down-> RedoController
+note on link
+    isFinished()
+    isWinner()
+end note
+ProposeView .down.> Message
+note on link
+    write()
+end note
+Board .down.> Board
+note on link
+    isLoser()
+end note
+ProposeView .down.> MenuView
+note on link
+    write(RedoController)
+end note
+MenuView .down.> RedoController
+note on link
+    undoable()
+    redoable()
+    redo()
+end note
+@enduml
+
+@startuml mastermind_analisis_usecase_resume
+allow_mixing
+
+actor :Player: as Playerr
+
+package controllers  {
+    object ResumeController
+}
+
+package models  {
+    object Board
+    object SecretCombination
+}
+
+package types  {
+    object Color
+}
+
+package views {
+    object ResumeView
+    object Message
+}
+
+Playerr --> ResumeView
+note on link
+    resume()
+end note
+ResumeView --> ResumeController
+note on link
+    reset()
+end note
+ResumeView ..> Message
+note on link
+    write()
+end note
+ResumeController --> Board
+note on link
+    reset()
+end note
+Board *-down-> SecretCombination
+note on link
+    new()
+end note
+SecretCombination *-down-> Color
+@enduml
+
+@startuml mastermind_analisis_usecase_open
+allow_mixing
+
+actor Player
+
+package views {
+    object StartView
+    object OpenView
+    object Message
+    object BoardView
+    object SecretCombinationView
+    object ProposedCombinationView
+    object ResultView
+    object ColorView
+}
+
+package controllers {
+    object "openController\n:OpenController" as OpenController
+}
+
+package models {
+    object Board
+    object Result
+    object ProposedCombination
+}
+
+package types {
+    object "color\n:Color" as Color
+}
+
+Player -down-> StartView
+note on link
+    open()
+end note
+StartView .down.> OpenView
+note on link
+    interact(openController)
+end note
+OpenView .down.> Message
+note on link
+    write()
+end note
+OpenView .down.> OpenController
+note on link
+    open(name)
+end note
+StartView .down.> Message
+note on link
+    write()
+end note
+StartView .down.> BoardView
+note on link
+    write(startController)
+end note
+BoardView .down.> OpenController
+note on link
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+BoardView .down.> Message
+note on link
+    write(attempts)
+end note
+BoardView .down.> SecretCombinationView
+note on link
+    write()
+end note
+SecretCombinationView .down.> Message
+note on link
+    write()
+end note
+BoardView .down.> ProposedCombinationView
+note on link
+    write(colors)
+end note
+ProposedCombinationView .down.> ColorView
+note on link
+    write(color)
+end note
+ColorView .down.> Color
+BoardView .down.> ResultView
+note on link
+    write(blacks, whites)
+end note
+ResultView .down.> Message
+note on link
+    write(blacks, whites)
+end note
+OpenController -down-> Board
+note on link
+    open(name)
+    getAttempts()
+    getProposedCombinationColors(position)
+    getBlacks(position)
+    getWhites(position)
+end note
+Board *-down-> Result
+note on link
+    getBlacks()
+    getWhites()
+end note
+Board *-down-> ProposedCombination
+note on link
+    getColors()
+end note
+ProposedCombination *-down-> Color
+Board .down.> Color
+OpenController .down.> Color
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+@enduml
+
+@startuml mastermind_analisis_usecase_save
+allow_mixing
+
+actor :Player: as Playerr
+
+package controllers  {
+    object SaveController
+}
+
+package models  {
+    object Board
+}
+
+package views {
+    object SaveView
+    object Message
+}
+
+Playerr --> SaveView
+note on link
+    save()
+end note
+SaveView --> SaveController
+note on link
+    save(name)
+end note
+SaveView ..> Message
+note on link
+    write()
+end note
+SaveController --> Board
+note on link
+    save(name)
+end note
+@enduml
+
+@startuml mastermind_analisis_usecase_exit
+allow_mixing
+
+actor :Player: as Playerr
+
+package controllers  {
+    object "exitController\n:ExitController" as ExitController
+}
+
+package views {
+    object ProposeView
+    object MenuView
+}
+
+Playerr --> ProposeView
+note on link
+    exit()
+end note
+ProposeView ..> MenuView
+note on link
+    exit(exitController)
+end note
+MenuView ..> ExitController
+note on link
+    exit()
+end note
+@enduml

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="722px" preserveAspectRatio="none" style="width:303px;height:722px;" version="1.1" viewBox="0 0 303 722" width="303px" zoomAndPan="magnify"><defs><filter height="300%" id="f170aw6aqn6905" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g id="INITIAL"><rect fill="#FEFECE" filter="url(#f170aw6aqn6905)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="69" x="24.5" y="87"/><line style="stroke:#A80036;stroke-width:1.5;" x1="24.5" x2="93.5" y1="113.2969" y2="113.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="34.5" y="104.9951">INITIAL</text></g><g id="IN_GAME"><rect fill="#FEFECE" filter="url(#f170aw6aqn6905)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="83" x="17.5" y="579"/><line style="stroke:#A80036;stroke-width:1.5;" x1="17.5" x2="100.5" y1="605.2969" y2="605.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="27.5" y="596.9951">IN_GAME</text></g><g id="start"><rect fill="#FEFECE" filter="url(#f170aw6aqn6905)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="34" y="214"/><line style="stroke:#A80036;stroke-width:1.5;" x1="34" x2="84" y1="240.2969" y2="240.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="61" y="231.9951"/></g><g id="ShowBoard"><rect fill="#FEFECE" filter="url(#f170aw6aqn6905)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="104" x="7" y="341"/><line style="stroke:#A80036;stroke-width:1.5;" x1="7" x2="111" y1="367.2969" y2="367.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="17" y="358.9951">Show board</text></g><g id="showed"><rect fill="#FEFECE" filter="url(#f170aw6aqn6905)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="34" y="452"/><line style="stroke:#A80036;stroke-width:1.5;" x1="34" x2="84" y1="478.2969" y2="478.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="61" y="469.9951"/></g><ellipse cx="59" cy="16" fill="#000000" filter="url(#f170aw6aqn6905)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><ellipse cx="59" cy="700" filter="url(#f170aw6aqn6905)" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;"/><ellipse cx="59.5" cy="700.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><!--MD5=[06c3f2024f4ea60966e79307ee69ec5f]
+link *start to INITIAL--><path d="M59,26.013 C59,38.698 59,62.409 59,81.57 " fill="none" id="*start-to-INITIAL" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,86.84,63,77.84,59,81.84,55,77.84,59,86.84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[633a00f1c77513bf3fc07c487e97d493]
+link INITIAL to start--><path d="M59,137.101 C59,157.593 59,187.076 59,208.884 " fill="none" id="INITIAL-to-start" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,213.973,63,204.973,59,208.973,55,204.973,59,213.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235" x="60" y="180.0669">Player requests to start a new game</text><!--MD5=[0fad0d04e143d2803812dde19ac4d1a9]
+link start to ShowBoard--><path d="M59,264.101 C59,284.593 59,314.076 59,335.884 " fill="none" id="start-to-ShowBoard" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,340.973,63,331.973,59,335.973,55,331.973,59,340.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="60" y="307.0669">System shows title message</text><!--MD5=[da6e7144752851676080c1e9eb35d3cb]
+link ShowBoard to showed--><path d="M59,391.191 C59,407.56 59,429.279 59,446.64 " fill="none" id="ShowBoard-to-showed" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,451.877,63,442.877,59,446.877,55,442.877,59,451.877" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0d0388ba88ff3dc2b7979df1a5e6894e]
+link showed to IN_GAME--><path d="M59,502.101 C59,522.593 59,552.076 59,573.884 " fill="none" id="showed-to-IN_GAME" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,578.973,63,569.973,59,573.973,55,569.973,59,578.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="60" y="545.0669">System allows Propose</text><!--MD5=[3eaa5feacff75f8f898238c0910154c4]
+link IN_GAME to *end--><path d="M59,629.2073 C59,646.8423 59,670.1261 59,684.8351 " fill="none" id="IN_GAME-to-*end" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="59,689.8399,63,680.8399,59,684.8399,55,680.8399,59,689.8399" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bfed5b339d94c33b68e3d6cb859ae4c0]
+@startuml
+state INITIAL
+state IN_GAME
+state start as " "
+state ShowBoard as "Show board"
+state showed as " "
+
+[*] - -> INITIAL
+INITIAL - -> start: Player requests to start a new game
+start - -> ShowBoard: System shows title message
+ShowBoard - -> showed
+showed - -> IN_GAME: System allows Propose
+IN_GAME - -> [*]
+@enduml
+
+PlantUML version 1.2021.4beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,163 @@
+@startuml mastermind_usecases
+left to right direction
+actor Player
+usecase Start
+Player --> Start
+usecase Board as "Show board"
+usecase Propose
+Player --> Propose
+usecase Resume
+Player --> Resume
+Start .down.> Board: include
+Propose .down.> Board: include
+usecase Undo
+Player -down-> Undo
+Undo .down.> Board: include
+usecase Redo
+Player -down-> Redo
+Redo .down.> Board: include
+@enduml
+
+@startuml mastermind_states
+state INITIAL
+state IN_GAME
+state OUT_GAME
+state EXIT
+state if_finished <<choice>>
+state if_resumed <<choice>>
+
+[*] --> INITIAL
+INITIAL --> IN_GAME: Start
+IN_GAME --> if_finished: Propose
+IN_GAME --> if_finished: Undo
+IN_GAME --> if_finished: Redo
+if_finished --> IN_GAME
+if_finished --> OUT_GAME: [finished]
+OUT_GAME --> if_resumed: Resume
+if_resumed --> INITIAL: [continued]
+if_resumed --> EXIT
+EXIT --> [*]
+@enduml
+
+@startuml propose_combination_usecase
+state IN_GAME
+state requested as " "
+state allowed as " "
+state error as " "
+state ShowBoard as "Show board"
+state winner as " "
+state looser as " "
+state finished as " "
+state last as " "
+state is_correct <<choice>>
+state is_finished <<choice>>
+state is_winner <<choice>>
+
+[*] --> IN_GAME
+IN_GAME --> requested: Player requests propose a combination
+requested --> allowed: System requests a proposed combination
+allowed --> is_correct: Player introduces a proposed combination
+is_correct --> ShowBoard
+is_correct --> error: [incorrect proposed combination]
+note on link
+  proposedCombination.colors.length != 4
+  proposedCombination.colors at least one repeated
+  proposedCombination.colors at least one != Color.values
+end note
+error --> last: System shows error
+ShowBoard --> is_finished
+is_finished --> is_winner: [finished]
+note on link
+  winner || loser
+end note
+is_winner --> winner: [winner]
+note on link
+  result.blacks = 4
+end note
+is_winner --> looser: [loser]
+note on link
+  result.blacks < 4 && attempts = 10
+end note
+is_finished --> last
+winner --> finished: System shows winner message
+looser --> finished: System shows loser message
+last --> [*]: System allows Propose\nSystem allows Undo if undoable\nSystem allows Redo if redoable
+finished --> [*]: System allows to resume a new game
+@enduml
+
+@startuml resume_usecase
+state OUT_GAME
+state INITIAL
+state EXIT
+state requested as " "
+state allowed as " "
+
+[*] --> OUT_GAME
+OUT_GAME --> requested: Player requests to resume a new game
+requested --> allowed: System requests to continue
+allowed --> INITIAL: Player introduces yes
+allowed --> EXIT: Player introduces no
+INITIAL --> [*]
+EXIT --> [*]
+@enduml
+
+@startuml start_usecase
+state INITIAL
+state IN_GAME
+state start as " "
+state ShowBoard as "Show board"
+state showed as " "
+
+[*] --> INITIAL
+INITIAL --> start: Player requests to start a new game
+start --> ShowBoard: System shows title message
+ShowBoard --> showed
+showed --> IN_GAME: System allows Propose
+IN_GAME --> [*]
+@enduml
+
+@startuml show_board_usecase
+state attempts_shown as " "
+state combinations_shown as " "
+[*] --> attempts_shown: System shows attempts
+attempts_shown --> combinations_shown: System shows secret combination as "****"
+combinations_shown --> [*]: System shows proposed combinations with results
+@enduml
+
+@startuml undo_usecase
+state IN_GAME
+state ShowBoard as "Show board"
+state showed as " "
+state showed1 as " "
+state is_undoable <<choice>>
+
+[*] --> IN_GAME
+IN_GAME --> ShowBoard: Player requests undo
+ShowBoard --> is_undoable
+is_undoable --> showed: [undoable]
+note on link
+  attempts > 0
+end note
+is_undoable --> showed1
+showed --> [*]: System allows Propose\nSystem allows Undo\nSystem allows Redo if redoable
+showed1 --> [*]: System allows Propose\nSystem allows Redo if redoable
+@enduml
+
+@startuml redo_usecase
+state IN_GAME
+state ShowBoard as "Show board"
+state showed as " "
+state showed1 as " "
+state is_undoable <<choice>>
+
+[*] --> IN_GAME
+IN_GAME --> ShowBoard: Player requests redo
+ShowBoard --> is_undoable
+is_undoable --> showed: [redoable]
+note on link
+  undo has been made previously
+end note
+is_undoable --> showed1
+showed --> [*]: System allows Propose\nSystem allows Undo if undoable\nSystem allows Redo
+showed1 --> [*]: System allows Propose\nSystem allows Undo if undoable
+@enduml

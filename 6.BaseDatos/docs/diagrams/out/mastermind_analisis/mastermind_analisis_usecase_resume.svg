@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="838px" preserveAspectRatio="none" style="width:350px;height:838px;" version="1.1" viewBox="0 0 350 838" width="350px" zoomAndPan="magnify"><defs><filter height="300%" id="f1qroi460s0x3b" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[f4e70ef68289585296b9045165e58692]
+cluster controllers--><polygon fill="#FFFFFF" filter="url(#f1qroi460s0x3b)" points="177,330.5,260,330.5,267,354.1094,325,354.1094,325,417.5,177,417.5,177,330.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="177" x2="267" y1="354.1094" y2="354.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77" x="181" y="347.0332">controllers</text><!--MD5=[a60570e4b426f702ccbb0d459e3b9417]
+cluster models--><polygon fill="#FFFFFF" filter="url(#f1qroi460s0x3b)" points="181,489.5,238,489.5,245,513.1094,333,513.1094,333,711.5,181,711.5,181,489.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="181" x2="245" y1="513.1094" y2="513.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="51" x="185" y="506.0332">models</text><!--MD5=[67cd15ce44b6dd54f77054b62c31bf42]
+cluster types--><polygon fill="#FFFFFF" filter="url(#f1qroi460s0x3b)" points="219,744.5,263,744.5,270,768.1094,295,768.1094,295,831.5,219,831.5,219,744.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="219" x2="270" y1="768.1094" y2="768.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="38" x="223" y="761.0332">types</text><!--MD5=[e2a75efa8a0f57c2afae8bf75386f79c]
+cluster views--><polygon fill="#FFFFFF" filter="url(#f1qroi460s0x3b)" points="16,173.5,63,173.5,70,197.1094,153,197.1094,153,417.5,16,417.5,16,173.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="70" y1="197.1094" y2="197.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="41" x="20" y="190.0332">views</text><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="116" x="193" y="366.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="200" y="380.957">ResumeController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="194" x2="308" y1="385.5938" y2="385.5938"/><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="47" x="227.5" y="525.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="234.5" y="539.957">Board</text><line style="stroke:#A80036;stroke-width:1.5;" x1="228.5" x2="273.5" y1="544.5938" y2="544.5938"/><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="120" x="197" y="660.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="106" x="204" y="674.957">SecretCombination</text><line style="stroke:#A80036;stroke-width:1.5;" x1="198" x2="316" y1="679.5938" y2="679.5938"/><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="44" x="235" y="780.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="30" x="242" y="794.957">Color</text><line style="stroke:#A80036;stroke-width:1.5;" x1="236" x2="278" y1="799.5938" y2="799.5938"/><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="88" x="40" y="209.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="74" x="47" y="223.957">ResumeView</text><line style="stroke:#A80036;stroke-width:1.5;" x1="41" x2="127" y1="228.5938" y2="228.5938"/><rect fill="#FEFECE" filter="url(#f1qroi460s0x3b)" height="35.0938" style="stroke:#A80036;stroke-width:1.5;" width="65" x="34.5" y="366.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="51" x="41.5" y="380.957">Message</text><line style="stroke:#A80036;stroke-width:1.5;" x1="35.5" x2="98.5" y1="385.5938" y2="385.5938"/><!--MD5=[fb2f237e4154b78a31e896754c8f6e24]
+entity Playerr--><ellipse cx="84" cy="14" fill="#FEFECE" filter="url(#f1qroi460s0x3b)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M84,22 L84,49 M71,30 L97,30 M84,49 L71,64 M84,49 L97,64 " fill="none" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="64" y="84.0332">Player</text><!--MD5=[a05f4f652e03f574fe6c9ed788b38828]
+link Playerr to ResumeView--><path codeLine="23" d="M84,87.62 C84,123.74 84,175.19 84,204.1 " fill="none" id="Playerr-to-ResumeView" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="84,209.23,88,200.23,84,204.23,80,200.23,84,209.23" style="stroke:#A80036;stroke-width:1.0;"/><path d="M89,122.5 L89,148.5 L161,148.5 L161,132.5 L151,122.5 L89,122.5 " fill="#FBFB77" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M151,122.5 L151,132.5 L161,132.5 L151,122.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="95" y="140.9951">resume()</text><!--MD5=[4b21c71922f6b938a01287b262bac1e8]
+link ResumeView to ResumeController--><path codeLine="27" d="M113.68,244.6 C127.21,252.79 143.05,263.31 156,274.5 C187.39,301.62 217.94,339.08 235.59,362.14 " fill="none" id="ResumeView-to-ResumeController" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="238.74,366.27,236.485,356.6828,235.7171,362.2873,230.1126,361.5194,238.74,366.27" style="stroke:#A80036;stroke-width:1.0;"/><path d="M200,279.5 L200,305.5 L258,305.5 L258,289.5 L248,279.5 L200,279.5 " fill="#FBFB77" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M248,279.5 L248,289.5 L258,289.5 L248,279.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="206" y="297.9951">reset()</text><!--MD5=[91198d1c12ec6e73a40fb6837ae56756]
+link ResumeView to Message--><path codeLine="31" d="M82.18,244.59 C79.1,272.64 72.87,329.46 69.43,360.88 " fill="none" id="ResumeView-to-Message" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="68.86,366.06,73.8133,357.5474,69.4028,361.0895,65.8606,356.679,68.86,366.06" style="stroke:#A80036;stroke-width:1.0;"/><path d="M83,279.5 L83,305.5 L139,305.5 L139,289.5 L129,279.5 L83,279.5 " fill="#FBFB77" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M129,279.5 L129,289.5 L139,289.5 L129,279.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="89" y="297.9951">write()</text><!--MD5=[4ed193857be843398b2fd79266ca2f30]
+link ResumeController to Board--><path codeLine="35" d="M251,401.51 C251,429.93 251,488.15 251,519.99 " fill="none" id="ResumeController-to-Board" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="251,525.24,255,516.24,251,520.24,247,516.24,251,525.24" style="stroke:#A80036;stroke-width:1.0;"/><path d="M256,438.5 L256,464.5 L314,464.5 L314,448.5 L304,438.5 L256,438.5 " fill="#FBFB77" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M304,438.5 L304,448.5 L314,448.5 L304,438.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="262" y="456.9951">reset()</text><!--MD5=[5e915b8ab835b2366405aaf6901e131b]
+link Board to SecretCombination--><path codeLine="39" d="M252.2907,572.5678 C252.2907,572.5678 254.66,625.15 255.65,647.08 " fill="none" id="Board-SecretCombination" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="256.24,660.22,259.8304,651.0489,256.0147,655.2251,251.8385,651.4094,256.24,660.22" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="256.0147" x2="255.655" y1="655.2251" y2="647.225"/><polygon fill="#A80036" points="251.75,560.58,248.0244,566.7541,252.2907,572.5678,256.0163,566.3937,251.75,560.58" style="stroke:#A80036;stroke-width:1.0;"/><path d="M259,595.5 L259,621.5 L311,621.5 L311,605.5 L301,595.5 L259,595.5 " fill="#FBFB77" filter="url(#f1qroi460s0x3b)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M301,595.5 L301,605.5 L311,605.5 L301,595.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31" x="265" y="613.9951">new()</text><!--MD5=[07d792321078d51159861622e3ead1f5]
+link SecretCombination to Color--><path codeLine="43" d="M257,707.66 C257,707.66 257,749.48 257,767.33 " fill="none" id="SecretCombination-Color" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="257,780.43,261,771.43,257,775.43,253,771.43,257,780.43" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="257" x2="257" y1="775.43" y2="767.43"/><polygon fill="#A80036" points="257,695.66,253,701.66,257,707.66,261,701.66,257,695.66" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f13ad648ad8a32488adcdcc2753ad49f]
+@startuml mastermind_analisis_usecase_resume
+allow_mixing
+
+actor :Player: as Playerr
+
+package controllers  {
+    object ResumeController
+}
+
+package models  {
+    object Board
+    object SecretCombination
+}
+
+package types  {
+    object Color
+}
+
+package views {
+    object ResumeView
+    object Message
+}
+
+Playerr - -> ResumeView
+note on link
+    resume()
+end note
+ResumeView - -> ResumeController
+note on link
+    reset()
+end note
+ResumeView ..> Message
+note on link
+    write()
+end note
+ResumeController - -> Board
+note on link
+    reset()
+end note
+Board *-down-> SecretCombination
+note on link
+    new()
+end note
+SecretCombination *-down-> Color
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: es
+Country: ES
+--></g></svg>

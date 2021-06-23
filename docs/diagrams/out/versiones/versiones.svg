@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="870px" preserveAspectRatio="none" style="width:473px;height:870px;" version="1.1" viewBox="0 0 473 870" width="473px" zoomAndPan="magnify"><defs><filter height="300%" id="fk4yj2t4918gq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g id="Básica"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="65" x="40.5" y="89.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="40.5" x2="105.5" y1="115.7969" y2="115.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="50.5" y="107.4951">Básica</text></g><g id="Gráficos"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="79" x="33.5" y="219"/><line style="stroke:#A80036;stroke-width:1.5;" x1="33.5" x2="112.5" y1="245.2969" y2="245.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="43.5" y="236.9951">Gráficos</text></g><g id="UndoRedo"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="93" x="26.5" y="346"/><line style="stroke:#A80036;stroke-width:1.5;" x1="26.5" x2="119.5" y1="372.2969" y2="372.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="36.5" y="363.9951">UndoRedo</text></g><g id="ClienteServidor"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="132" x="7" y="473"/><line style="stroke:#A80036;stroke-width:1.5;" x1="7" x2="139" y1="499.2969" y2="499.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="17" y="490.9951">ClienteServidor</text></g><g id="Ficheros"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="80" x="33" y="600"/><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="113" y1="626.2969" y2="626.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="43" y="617.9951">Ficheros</text></g><g id="BasesDatos"><rect fill="#FEFECE" filter="url(#fk4yj2t4918gq)" height="50" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="103" x="21.5" y="727"/><line style="stroke:#A80036;stroke-width:1.5;" x1="21.5" x2="124.5" y1="753.2969" y2="753.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="31.5" y="744.9951">BasesDatos</text></g><ellipse cx="73" cy="16" fill="#000000" filter="url(#fk4yj2t4918gq)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><ellipse cx="73" cy="848" filter="url(#fk4yj2t4918gq)" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;fill:none;"/><ellipse cx="73.5" cy="848.5" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"/><path d="M141,87 L141,110.5 L105.6953,114.5 L141,118.5 L141,142.3984 A0,0 0 0 0 141,142.3984 L377,142.3984 A0,0 0 0 0 377,142.3984 L377,97 L367,87 L141,87 A0,0 0 0 0 141,87 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M367,87 L367,97 L377,97 L367,87 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="215" x="147" y="104.0669">Juego de Mastermind con interfaz</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201" x="147" y="119.1997">de consola y con casos de uso:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="147" y="134.3325">Start, Propose y Resume.</text><path d="M148,231.5 L148,240 L112.641,244 L148,248 L148,256.6328 A0,0 0 0 0 148,256.6328 L342,256.6328 A0,0 0 0 0 342,256.6328 L342,241.5 L332,231.5 L148,231.5 A0,0 0 0 0 148,231.5 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M332,231.5 L332,241.5 L342,241.5 L332,231.5 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173" x="154" y="248.5669">Añadiendo interfaz gráfica.</text><path d="M155,351 L155,367 L119.828,371 L155,375 L155,391.2656 A0,0 0 0 0 155,391.2656 L423,391.2656 A0,0 0 0 0 423,391.2656 L423,361 L413,351 L155,351 A0,0 0 0 0 155,351 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M413,351 L413,361 L423,361 L413,351 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="161" y="368.0669">Añadiendo funcionalidad con deshacer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="161" y="383.1997">y rehacer jugadas.</text><path d="M174,485.5 L174,494 L139.193,498 L174,502 L174,510.6328 A0,0 0 0 0 174,510.6328 L446,510.6328 A0,0 0 0 0 446,510.6328 L446,495.5 L436,485.5 L174,485.5 A0,0 0 0 0 174,485.5 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M436,485.5 L436,495.5 L446,495.5 L436,485.5 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="251" x="180" y="502.5669">Añadiendo distribución cliente/servidor.</text><path d="M148,605 L148,621 L113.023,625 L148,629 L148,645.2656 A0,0 0 0 0 148,645.2656 L434,645.2656 A0,0 0 0 0 434,645.2656 L434,615 L424,605 L148,605 A0,0 0 0 0 148,605 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M424,605 L424,615 L434,615 L424,605 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="265" x="154" y="622.0669">Añadiendo funcionalidad con persistencia</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="154" y="637.1997">de ficheros.</text><path d="M159.5,739.5 L159.5,748 L124.814,752 L159.5,756 L159.5,764.6328 A0,0 0 0 0 159.5,764.6328 L464.5,764.6328 A0,0 0 0 0 464.5,764.6328 L464.5,749.5 L454.5,739.5 L159.5,739.5 A0,0 0 0 0 159.5,739.5 " fill="#15D2F3" filter="url(#fk4yj2t4918gq)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M454.5,739.5 L454.5,749.5 L464.5,749.5 L454.5,739.5 " fill="#15D2F3" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="284" x="165.5" y="756.5669">Adaptando persistencia con bases de datos.</text><!--MD5=[f605c59e629b59d8c3ea2af840dc6e5f]
+link *start to Básica--><path d="M73,26.253 C73,39.417 73,64.15 73,83.93 " fill="none" id="*start-to-Básica" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,89.102,77,80.102,73,84.102,69,80.102,73,89.102" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9840c15ac0cf6d125738567f23ab12c8]
+link Básica to Gráficos--><path d="M73,139.782 C73,160.785 73,191.212 73,213.59 " fill="none" id="Básica-to-Gráficos" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,218.809,77,209.809,73,213.809,69,209.809,73,218.809" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="74" y="185.0669">Mantenimiento adaptativo</text><!--MD5=[f84994fe424171fa73ab202e8d1682ff]
+link Gráficos to UndoRedo--><path d="M73,269.101 C73,289.593 73,319.076 73,340.884 " fill="none" id="Gráficos-to-UndoRedo" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,345.973,77,336.973,73,340.973,69,336.973,73,345.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="74" y="312.0669">Mantenimiento perfectivo</text><!--MD5=[518d0a0fdd1b437d9b8bddfda61a7673]
+link UndoRedo to ClienteServidor--><path d="M73,396.101 C73,416.593 73,446.076 73,467.884 " fill="none" id="UndoRedo-to-ClienteServidor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,472.973,77,463.973,73,467.973,69,463.973,73,472.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="74" y="439.0669">Mantenimiento adaptativo</text><!--MD5=[314dd3092bc937f8551317235c4480a2]
+link ClienteServidor to Ficheros--><path d="M73,523.101 C73,543.593 73,573.076 73,594.884 " fill="none" id="ClienteServidor-to-Ficheros" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,599.973,77,590.973,73,594.973,69,590.973,73,599.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="74" y="566.0669">Mantenimiento perfectivo</text><!--MD5=[28750a9e82a22816a1b2c2e97b9ba5ff]
+link Ficheros to BasesDatos--><path d="M73,650.101 C73,670.593 73,700.076 73,721.884 " fill="none" id="Ficheros-to-BasesDatos" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,726.973,77,717.973,73,721.973,69,717.973,73,726.973" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="74" y="693.0669">Mantenimiento adaptativo</text><!--MD5=[ee5cd2ac3662af3e5a8f0935aca91e43]
+link BasesDatos to *end--><path d="M73,777.2073 C73,794.8423 73,818.1261 73,832.8351 " fill="none" id="BasesDatos-to-*end" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="73,837.8399,77,828.8399,73,832.8399,69,828.8399,73,837.8399" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[59fb7b5a2ff9a273f22783f2d9be5bce]
+@startuml
+state Básica
+state Gráficos
+state UndoRedo
+state ClienteServidor
+State Ficheros
+State BasesDatos
+
+[*] - -> Básica
+Básica - -> Gráficos:Mantenimiento adaptativo
+Gráficos - -> UndoRedo:Mantenimiento perfectivo
+UndoRedo - -> ClienteServidor:Mantenimiento adaptativo
+ClienteServidor - -> Ficheros:Mantenimiento perfectivo
+Ficheros - -> BasesDatos:Mantenimiento adaptativo
+BasesDatos - -> [*]
+
+
+
+note right of Básica #15D2F3
+  Juego de Mastermind con interfaz
+  de consola y con casos de uso:
+  Start, Propose y Resume.
+end note
+
+note right of Gráficos #15D2F3
+  Añadiendo interfaz gráfica.
+end note
+
+note right of UndoRedo #15D2F3
+  Añadiendo funcionalidad con deshacer
+  y rehacer jugadas.
+end note
+
+note right of ClienteServidor #15D2F3
+  Añadiendo distribución cliente/servidor.
+end note
+
+note right of Ficheros #15D2F3
+  Añadiendo funcionalidad con persistencia
+  de ficheros.
+end note
+
+note right of BasesDatos #15D2F3
+  Adaptando persistencia con bases de datos.
+end note
+@enduml
+
+PlantUML version 1.2021.4beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

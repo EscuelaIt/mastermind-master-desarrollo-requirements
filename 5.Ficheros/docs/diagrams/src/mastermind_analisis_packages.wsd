@@ -1,0 +1,281 @@
+@startuml mastermind_analisis_packages
+package views
+package controllers
+package models
+package types
+views .down.> controllers
+views .down.> types
+controllers .down.> models
+controllers .down.> types
+models .down.> types
+@enduml
+
+@startuml mastermind_analisis_controllers
+package controllers {
+    abstract class Controller
+    class StartController {
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+    }
+    class ProposeController {
+        + getError(List<Color>): Error
+        + add(List<Color>)
+        + isFinished(): boolean
+        + isWinner(): boolean
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+    }
+    class ResumeController {
+        + reset()
+    }
+    class ShowBoardController {
+        ~ getAttempts(): int
+        ~ getProposedCombinationColors(int): List<Color>
+        ~ getBlacks(int): int
+        ~ getWhites(int): int
+    }
+    class UndoController {
+        + undoable(): boolean
+        + undo()
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+    }
+    class RedoController {
+        + redoable(): boolean
+        + redo()
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+    }
+    class OpenController {
+        + open(String)
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+    }
+    class ExitController {
+        + exit()
+    }
+    class SaveController {
+        + save(String)
+    }
+}
+
+Controller <|-- StartController
+Controller <|-- ProposeController
+Controller <|-- ResumeController
+Controller <|-- ShowBoardController
+Controller <|-- UndoController
+Controller <|-- RedoController
+Controller <|-- SaveController
+Controller <|-- OpenController
+Controller <|-- ExitController
+StartController *-down-> ShowBoardController
+ProposeController *-down-> ShowBoardController
+UndoController *-down-> ShowBoardController
+RedoController *-down-> ShowBoardController
+OpenController *-down-> ShowBoardController
+
+class "models.\nBoard" as Board
+enum "types.\nColor" as Color
+enum "types.\nError" as Error
+
+Controller -down-> Board
+ProposeController .down.> Error
+ProposeController .down.> Color
+ShowBoardController .down.> Color
+StartController .down.> Color
+@enduml
+
+@startuml mastermind_analisis_views
+package views {
+    class PlayerView
+    class StartView {
+        ~ start(StartController)
+    }
+    class ProposeView {
+        ~ propose(ProposeController)
+    }
+    class ResumeView {
+        ~ resume(ResumeController): boolean
+    }
+    class BoardView {
+        ~ write(Controller)
+    }
+    class MenuView {
+        ~ write(Controller)
+    }
+    class ProposedCombinationView {
+        ~ write(ProposeController)
+        ~ read(): List<Color>
+    }
+    class SecretCombinationView {
+        ~ write()
+    }
+    class ResultView {
+        ~ write(int, int)
+    }
+    class ColorView {
+        ~ write(Color)
+        ~ read(): Color
+    }
+    enum Message {
+        + TITLE
+        + SECRET_COMBINATION
+        + ATTEMPTS
+        + RESULT
+        + PROPOSED_COMBINATION
+        + WINNER
+        + LOOSER
+        + RESUME
+        + OPEN
+        + SAVE
+        ~ write()
+        ~ write(int)
+        ~ write(int, int)
+    }
+    class ErrorView {
+        ~ write(Error)
+    }
+    class SaveView {
+        ~ save(SaveController)
+    }
+    class OpenView {
+        ~ interact(OpenController)
+    }
+}
+
+PlayerView *-down-> StartView
+PlayerView *-down-> ProposeView
+PlayerView *-down-> ResumeView
+StartView .down.> BoardView
+ProposeView .down.> BoardView
+BoardView .down.> ProposedCombinationView
+BoardView .down.> ResultView
+BoardView .down.> Message
+BoardView .down.> SecretCombinationView
+ProposedCombinationView .down.> ColorView
+ProposedCombinationView .down.> ErrorView
+ProposedCombinationView .down.> Message
+ResultView .down.> Message
+StartView .down.> Message
+ResumeView .down.> Message
+ProposeView .down.> MenuView
+MenuView .down.> ProposedCombinationView
+ProposeView .down.> Message
+StartView .down.> OpenView
+OpenView .down.> Message
+SaveView .down.> Message
+
+class "controllers.\nProposeController" as ProposeController
+class "controllers.\nStartController" as StartController
+class "controllers.\nResumeController" as ResumeController
+class "controllers.\nUndoController" as UndoController
+class "controllers.\nRedoController" as RedoController
+class "controllers.\nOpenController" as OpenController
+class "controllers.\nExitController" as ExitController
+class "controllers.\nSaveController" as SaveController
+abstract class "controllers.\nController" as Controller
+enum "types.\nColor" as Color
+enum "types.\nError" as Error
+
+ResumeView -down-> ResumeController
+StartView -down-> StartController
+ProposeView -down-> ProposeController
+MenuView .down.> UndoController
+MenuView .down.> RedoController
+BoardView -down-> Controller
+ProposedCombinationView .down.> ProposeController
+BoardView .down.> Color
+ProposedCombinationView .down.> Color
+ColorView .down.> Color
+ProposedCombinationView .down.> Error
+OpenView .down.> OpenController
+MenuView .down.> ExitController
+ErrorView .down.> Error
+SaveView .down.> SaveController
+@enduml
+
+@startuml mastermind_analisis_models
+package models {
+    class Board {
+        + reset()
+        + add(List<Color>)
+        + getError(List<Color>): Error
+        + isFinished(): boolean
+        + isWinner(): boolean
+        - isLoser(): boolean
+        + getAttempts(): int
+        + getProposedCombinationColors(int): List<Color>
+        + getBlacks(int): int
+        + getWhites(int): int
+        + undoable(): boolean
+        + redoable(): boolean
+        + undo()
+        + redo()
+        + open(String)
+        + save(String)
+    }
+    class Combination
+    class ProposedCombination {
+        ~ ProposedCombination(List<Color>)
+        ~ getColors(): List<Color>
+        ~ getError(): Error
+        ~ contains(Color): boolean
+        ~ contains(Color, int): boolean
+    }
+    class SecretCombination {
+        ~ getResult(ProposedCombination): Result
+    }
+    Combination <|-- ProposedCombination
+    Combination <|-- SecretCombination
+    class Result {
+        ~ Result(int, int)
+        ~ getBlacks(): int
+        ~ getWhites(): int
+        ~ isWinner(): boolean
+    }
+}
+
+
+enum "types.\nColor" as Color
+enum "types.\nError" as Error
+
+Board .down.> Color
+Board .down.> Error
+Combination *-down-> Color
+ProposedCombination .down.> Error
+
+Board *-down-> ProposedCombination
+Board *-down-> SecretCombination
+Board *-down-> Result
+SecretCombination .down.> Result
+SecretCombination .down.> ProposedCombination
+@enduml
+
+@startuml mastermind_analisis_types
+package types {
+    enum Color {
+        + RED
+        + GREEN
+        + YELLOW
+        + BLUE
+        + MAGENTA
+        + CYAN
+    }
+
+    enum Error {
+        + DUPLICATED
+        + WRONG_CHARACTERS
+        + WRONG_LENGTH
+    }
+}
+@enduml

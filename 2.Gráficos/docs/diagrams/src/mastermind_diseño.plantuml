@@ -1,0 +1,11 @@
+@startuml mastermind_diseño_despliegue
+node node #DDDDDD [
+<b>Personal Computer</b>
+----
+
+]
+
+[ mastermind.jar ] as component
+
+node *--> component
+@enduml
